@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade – Revisional de Juros & Veículos com Débitos | Resolve Brasil</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #1a4a2e;
+    --brand-dark: #0f2d1c;
+    --accent: #f5c400;
+    --accent-hover: #e0b000;
+    --green-light: #2d7a47;
+    --green-mid: #236138;
+    --bg: #ffffff;
+    --bg2: #f2f7f4;
+    --text: #1c1c1c;
+    --muted: #5a6e62;
+    --line: #d4e5da;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 60%, var(--green-light) 100%);
+    padding: 60px 24px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    background: rgba(245, 196, 0, 0.10);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px; left: 5%;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(245, 196, 0, 0.06);
+  }
+  .hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tag {
+    display: inline-block;
+    border: 1px solid rgba(245,196,0,0.55);
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    max-width: 560px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+  }
+  .hero-meta-item .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* SERVICES BANNER */
+  .services-banner {
+    background: var(--accent);
+  }
+  .services-banner-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .svc {
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .svc:first-child {
+    border-right: 1px solid rgba(0,0,0,0.12);
+  }
+  .svc-icon { font-size: 22px; flex-shrink: 0; }
+  .svc-text strong {
+    display: block;
+    color: var(--brand-dark);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .svc-text span {
+    color: rgba(15,45,28,0.65);
+    font-size: 11px;
+  }
+
+  /* CONTENT */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  section {
+    margin-bottom: 44px;
+    padding-bottom: 44px;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-light);
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--brand);
+    margin-bottom: 16px;
+  }
+  p { margin-bottom: 12px; color: var(--text); }
+  ul { padding-left: 0; list-style: none; margin-bottom: 12px; }
+  li {
+    padding: 8px 0 8px 20px;
+    position: relative;
+    color: var(--text);
+    border-bottom: 1px dashed var(--line);
+    font-size: 14px;
+  }
+  li:last-child { border-bottom: none; }
+  li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--green-light);
+    font-size: 12px;
+    top: 9px;
+  }
+  a { color: var(--green-light); text-decoration: none; font-weight: 500; }
+  a:hover { text-decoration: underline; }
+
+  /* PARTNER CARDS */
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .partner-card {
+    background: var(--bg2);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 4px 4px 0;
+  }
+  .partner-card strong {
+    display: block;
+    color: var(--brand);
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
+  .partner-card span { color: var(--muted); font-size: 12px; }
+
+  /* RIGHTS GRID */
+  .rights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .right-item {
+    background: var(--bg2);
+    border-top: 3px solid var(--brand);
+    padding: 16px;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--brand);
+    font-weight: 500;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight {
+    background: #f0f9f3;
+    border: 1px solid #b8ddc5;
+    border-left: 4px solid var(--brand);
+    padding: 16px 20px;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+    color: var(--brand-dark);
+    margin: 16px 0;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  footer {
+    background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 12px;
+    line-height: 2.2;
+  }
+  footer .logo-footer {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 4px;
+  }
+  footer .logo-footer span { color: var(--accent); }
+  .lgpd-badge {
+    display: inline-block;
+    margin-top: 12px;
+    border: 1px solid rgba(245,196,0,0.3);
+    color: rgba(245,196,0,0.7);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 28px; }
+    .services-banner-inner { grid-template-columns: 1fr; }
+    .svc:first-child { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); }
+    .partner-grid, .rights-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Documento oficial · LGPD</div>
+    <h1>Política de <span>Privacidade</span></h1>
+    <p>Esta política descreve como a Resolve Brasil coleta, utiliza e protege seus dados pessoais nas campanhas de Revisional de Juros Abusivos e Compra de Veículos com Débitos.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><div class="dot"></div> Última atualização: março de 2026</div>
+      <div class="hero-meta-item"><div class="dot"></div> Lei nº 13.709/2018 – LGPD</div>
+      <div class="hero-meta-item"><div class="dot"></div> Resolve Brasil</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES BANNER -->
+<div class="services-banner">
+  <div class="services-banner-inner">
+    <div class="svc">
+      <div class="svc-icon">⚖️</div>
+      <div class="svc-text">
+        <strong>Revisional de Juros Abusivos</strong>
+        <span>Contratos com taxas acima do permitido por lei</span>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">🚗</div>
+      <div class="svc-text">
+        <strong>Veículos com Débitos</strong>
+        <span>Multas, IPVA, licenciamento e financiamento</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <section>
+    <div class="section-num">01 · Identificação</div>
+    <h2>Quem somos</h2>
+    <p>A <strong>Resolve Brasil</strong> é uma empresa especializada em soluções automotivas e jurídicas. Atuamos na análise e contestação de contratos com juros abusivos, bem como na intermediação da compra de veículos com pendências financeiras ou documentais.</p>
+    <p>Dúvidas sobre esta política? Fale conosco: <a href="/cdn-cgi/l/email-protection#3242405b4453515b56535657724057415d5e4457504053415b5e1c515d5f1c5040"><span class="__cf_email__" data-cfemail="ddadafb4abbcbeb4b9bcb9b89dafb8aeb2b1abb8bfafbcaeb4b1f3beb2b0f3bfaf">[email&#160;protected]</span></a></p>
+  </section>
+
+  <section>
+    <div class="section-num">02 · Coleta</div>
+    <h2>Quais dados coletamos</h2>
+    <p>Ao preencher nossos formulários — inclusive os veiculados no Facebook e Instagram — podemos coletar:</p>
+    <ul>
+      <li>Nome completo</li>
+      <li>Número de telefone e/ou WhatsApp</li>
+      <li>Endereço de e-mail</li>
+      <li>Cidade e estado de residência</li>
+      <li>Serviço de interesse: revisional de juros, compra de veículo com débitos ou ambos</li>
+      <li>Informações sobre contrato financeiro ou veículo, quando fornecidas voluntariamente</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-num">03 · Uso</div>
+    <h2>Como usamos seus dados</h2>
+    <div class="highlight">
+      "Usaremos suas informações para entrar em contato com você sobre revisional de juros abusivos e/ou aquisição de veículos com débitos pendentes, apresentando as melhores soluções disponíveis para o seu caso. Também poderemos compartilhar seus dados com parceiros especializados, como escritórios jurídicos e instituições financeiras, que poderão entrar em contato com você para oferecer condições de regularização e negociação."
+    </div>
+    <p>Além disso, seus dados poderão ser utilizados para:</p>
+    <ul>
+      <li>Análise do contrato ou situação do veículo e apresentação de proposta personalizada</li>
+      <li>Envio de informações sobre o andamento do seu caso por telefone, e-mail ou WhatsApp</li>
+      <li>Melhoria contínua dos nossos serviços de atendimento</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-num">04 · Parceiros</div>
+    <h2>Compartilhamento com terceiros</h2>
+    <p>Poderemos compartilhar seus dados com parceiros de confiança, conforme o serviço de seu interesse:</p>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <strong>Escritórios Jurídicos</strong>
+        <span>Direito do consumidor e revisão de contratos financeiros</span>
+      </div>
+      <div class="partner-card">
+        <strong>Instituições Financeiras</strong>
+        <span>Renegociação e quitação de financiamentos</span>
+      </div>
+      <div class="partner-card">
+        <strong>Despachantes</strong>
+        <span>Regularização documental e débitos de IPVA/multas</span>
+      </div>
+      <div class="partner-card">
+        <strong>Seguradoras</strong>
+        <span>Proteção e seguro do veículo adquirido</span>
+      </div>
+    </div>
+    <p style="margin-top:12px;"><strong>Não vendemos seus dados a terceiros.</strong> O compartilhamento ocorre somente para fins diretamente relacionados ao serviço solicitado.</p>
+  </section>
+
+  <section>
+    <div class="section-num">05 · Seus direitos</div>
+    <h2>Direitos do titular (LGPD)</h2>
+    <p>Conforme a Lei Geral de Proteção de Dados, você tem direito a:</p>
+    <div class="rights-grid">
+      <div class="right-item">Acessar seus dados</div>
+      <div class="right-item">Corrigir informações</div>
+      <div class="right-item">Solicitar exclusão</div>
+      <div class="right-item">Revogar consentimento</div>
+      <div class="right-item">Portabilidade dos dados</div>
+      <div class="right-item">Saber com quem foram compartilhados</div>
+    </div>
+    <p style="margin-top:16px;">Para exercer qualquer um desses direitos: <a href="/cdn-cgi/l/email-protection#5424263d2235373d30353031142631273b382231362635273d387a373b397a3626"><span class="__cf_email__" data-cfemail="3c4c4e554a5d5f55585d58597c4e594f53504a595e4e5d4f5550125f5351125e4e">[email&#160;protected]</span></a></p>
+  </section>
+
+  <section>
+    <div class="section-num">06 · Retenção</div>
+    <h2>Por quanto tempo guardamos seus dados</h2>
+    <p>Seus dados serão mantidos pelo período necessário para o cumprimento das finalidades descritas nesta política ou enquanto exigido por lei. Após esse prazo, serão excluídos ou anonimizados de forma segura.</p>
+  </section>
+
+  <section>
+    <div class="section-num">07 · Segurança</div>
+    <h2>Como protegemos seus dados</h2>
+    <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não autorizado, perda, alteração ou uso indevido, em conformidade com as melhores práticas de segurança da informação.</p>
+  </section>
+
+  <section>
+    <div class="section-num">08 · Atualizações</div>
+    <h2>Alterações nesta política</h2>
+    <p>Esta política pode ser revisada periodicamente. Sempre que houver alterações relevantes, publicaremos a versão atualizada nesta página com a nova data de vigência. Recomendamos que você a consulte regularmente.</p>
+  </section>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo-footer">Resolve <span>Brasil</span></div>
+  Soluções Automotivas &amp; Jurídicas<br>
+  CNPJ: 26.551.683/0001-69 &nbsp;·&nbsp; privacidade@resolvebrasil.com.br<br>
+  © 2026 · Todos os direitos reservados
+  <br><div class="lgpd-badge">✓ Em conformidade com a LGPD · Lei nº 13.709/2018</div>
+</footer>
+
+</body>
+</html>
